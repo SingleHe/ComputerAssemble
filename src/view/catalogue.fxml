@@ -1,23 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.control.cell.*?>
-<?import javafx.scene.image.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="584.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
 
 	<stylesheets>
 		<URL value="@computerbuilder.css" />
 	</stylesheets>
+	<children>
+		<TableView styleClass="table-view" VBox.vgrow="ALWAYS">
+			<columns>
+				<TableColumn text="Type" />
+				<TableColumn text="Name" />
+				<TableColumn text="Price" />
+				<TableColumn />
+			</columns>
+		</TableView>
+		<Label styleClass="h2" text="Filters" wrapText="true" VBox.vgrow="ALWAYS">
+         <padding>
+            <Insets bottom="5.0" top="10.0" />
+         </padding>
+		</Label>
+		<HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="295.0" VBox.vgrow="ALWAYS">
+			<children>
+				<Label prefHeight="19.0" prefWidth="106.0" text="Type          :" HBox.hgrow="ALWAYS">
+				   <HBox.margin>
+					  <Insets right="5.0" />
+				   </HBox.margin>
+				</Label>
+				<TextField prefHeight="30.0" prefWidth="472.0" HBox.hgrow="ALWAYS" />
+			</children>
+		</HBox>
+		<HBox VBox.vgrow="ALWAYS">
+			<HBox.margin>
+				<Insets top="10" />
+			</HBox.margin>
+			<children>
+				<Label prefHeight="19.0" prefWidth="111.0" text="Price Range:" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Label>
+				<TextField prefHeight="29.0" prefWidth="134.0" HBox.hgrow="ALWAYS" />
+				<Label text="To:" HBox.hgrow="ALWAYS" />
+				<TextField prefHeight="29.0" prefWidth="134.0" HBox.hgrow="ALWAYS" />
+			</children>
+			<VBox.margin>
+				<Insets top="10.0" />
+			</VBox.margin>
+		</HBox>
+		<Button styleClass="button" text="Add Selected to Build">
+         <VBox.margin>
+            <Insets bottom="10.0" top="15.0" />
+         </VBox.margin>
+		</Button>
+		<Button styleClass="button" text="Add New Part to Catalogue">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+		</Button>
+		<Button styleClass="button" text="Remove Selected from Catalogue">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+		</Button>
+		<Button styleClass="button" text="Close" />
+
+	</children>
 
 </VBox>
-
