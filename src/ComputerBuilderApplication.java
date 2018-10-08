@@ -17,6 +17,7 @@ public class ComputerBuilderApplication extends Application{
 
     @Override
     public void start(Stage stage) throws Exception {
+
         ViewLoader.showStage(new ComputerBuilder(), "/view/computerbuilder.fxml", "Guillermo's Computer Store", stage);
-    }
+}
 }
