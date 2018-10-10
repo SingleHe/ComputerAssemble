@@ -29,11 +29,11 @@
             <Label text="Type:" GridPane.halignment="CENTER" />
             <Label text="Name:" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             <Label text="Price:" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="1" />
-            <TextField prefHeight="29.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="addTypeField" GridPane.columnIndex="1" />
+            <TextField fx:id="addNameField" prefHeight="29.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="addPriceField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-		<Button styleClass="button" text="Add to Catalogue" VBox.vgrow="ALWAYS" />
+		<Button fx:id="btnAddToCatalogue" styleClass="button" text="Add to Catalogue" VBox.vgrow="ALWAYS" />
 	</children>
 </VBox>

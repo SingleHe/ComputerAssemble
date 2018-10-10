@@ -8,7 +8,7 @@
 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="264.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Label styleClass="h2">Invalid price entered.</Label>
-        <Button styleClass="menuButton" text="Okay" VBox.vgrow="ALWAYS">
+        <Button fx:id="btnErrorOK" styleClass="menuButton" text="Okay" VBox.vgrow="ALWAYS">
          <VBox.margin>
             <Insets top="20.0" />
          </VBox.margin>
