@@ -18,9 +18,9 @@
 	<children>
 		<TableView fx:id="tableView" onMouseClicked="# " styleClass="table-view" VBox.vgrow="ALWAYS">
 			<columns>
-				<TableColumn text="Type" />
-				<TableColumn text="Name" />
-				<TableColumn text="Price" />
+				<TableColumn fx:id="cataType" text="Type" />
+				<TableColumn fx:id="cataName" text="Name" />
+				<TableColumn fx:id="cataPrice" text="Price" />
 				<TableColumn />
 			</columns>
 		</TableView>
