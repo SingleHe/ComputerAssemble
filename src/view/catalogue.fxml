@@ -10,18 +10,17 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="584.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CatalogueController">
+<VBox prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CatalogueController">
 
 	<stylesheets>
 		<URL value="@computerbuilder.css" />
 	</stylesheets>
 	<children>
-		<TableView fx:id="tableView" onMouseClicked="# " styleClass="table-view" VBox.vgrow="ALWAYS">
+		<TableView fx:id="tableView" styleClass="table-view" VBox.vgrow="ALWAYS">
 			<columns>
 				<TableColumn fx:id="cataType" text="Type" />
 				<TableColumn fx:id="cataName" text="Name" />
 				<TableColumn fx:id="cataPrice" text="Price" />
-				<TableColumn />
 			</columns>
 		</TableView>
 		<Label styleClass="h2" text="Filters" wrapText="true" VBox.vgrow="ALWAYS">
@@ -36,7 +35,7 @@
 					  <Insets right="5.0" />
 				   </HBox.margin>
 				</Label>
-				<TextField fx:id="typeField" prefHeight="30.0" prefWidth="472.0" HBox.hgrow="ALWAYS" />
+				<TextField fx:id="typeField" onInputMethodTextChanged="#findByTypeOrPrice" prefHeight="30.0" prefWidth="371.0" HBox.hgrow="ALWAYS" />
 			</children>
 		</HBox>
 		<HBox VBox.vgrow="ALWAYS">
@@ -45,34 +44,34 @@
 			</HBox.margin>
 			<children>
 				<Label prefHeight="19.0" prefWidth="111.0" text="Price Range:" HBox.hgrow="ALWAYS" />
-				<TextField fx:id="priceFieldFrom" prefHeight="29.0" prefWidth="134.0" HBox.hgrow="ALWAYS" />
+				<TextField fx:id="priceFieldFrom" onInputMethodTextChanged="#findByTypeOrPrice" prefHeight="29.0" prefWidth="134.0" HBox.hgrow="ALWAYS" />
 				<Label text="To:" HBox.hgrow="ALWAYS">
 				   <HBox.margin>
 					  <Insets left="5.0" right="5.0" />
 				   </HBox.margin>
 				</Label>
-				<TextField fx:id="priceFieldTo" prefHeight="29.0" prefWidth="134.0" HBox.hgrow="ALWAYS" />
+				<TextField fx:id="priceFieldTo" onInputMethodTextChanged="#findByTypeOrPrice" prefHeight="29.0" prefWidth="134.0" HBox.hgrow="ALWAYS" />
 			</children>
 			<VBox.margin>
 				<Insets top="10.0" />
 			</VBox.margin>
 		</HBox>
-		<Button fx:id="btnAddSelected" styleClass="button" text="Add Selected to Build">
+		<Button fx:id="btnAddSelected" onAction="#btnAddSelected" styleClass="button" text="Add Selected to Build">
          <VBox.margin>
             <Insets bottom="10.0" top="15.0" />
          </VBox.margin>
 		</Button>
-		<Button fx:id="btnAddNew" styleClass="button" text="Add New Part to Catalogue">
+		<Button fx:id="btnAddNew" onAction="#btnAddNew" styleClass="button" text="Add New Part to Catalogue">
          <VBox.margin>
             <Insets bottom="10.0" />
          </VBox.margin>
 		</Button>
-		<Button fx:id="btnRemoveSelected" styleClass="button" text="Remove Selected from Catalogue">
+		<Button fx:id="btnRemoveSelected" onAction="#btnRemoveSelected" styleClass="button" text="Remove Selected from Catalogue">
          <VBox.margin>
             <Insets bottom="10.0" />
          </VBox.margin>
 		</Button>
-		<Button fx:id="btnClose" styleClass="button" text="Close" />
+		<Button fx:id="btnClose" onAction="#btnClose" styleClass="button" text="Close" />
 
 	</children>
    <padding>

@@ -9,17 +9,17 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="300" prefWidth="500" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="450.0" prefWidth="500" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BuildController">
 
 	<stylesheets>
 		<URL value="@computerbuilder.css" />
 	</stylesheets>
 	<children>
-		<TableView styleClass="table-view">
+		<TableView fx:id="tableView" styleClass="table-view">
 			<columns>
-				<TableColumn text="Type" />
-				<TableColumn text="Name" />
-				<TableColumn text="Price" />
+				<TableColumn fx:id="type" text="Type" />
+				<TableColumn fx:id="name" text="Name" />
+				<TableColumn fx:id="price" text="Price" />
 				<TableColumn />
 			</columns>
 		</TableView>
@@ -30,21 +30,22 @@
                <Insets left="5.0" right="5.0" />
             </HBox.margin>
             </Label>
-         <VBox.margin>
-            <Insets bottom="10.0" top="5.0" />
-         </VBox.margin>
+            <VBox.margin>
+                <Insets bottom="10.0" top="5.0" />
+            </VBox.margin>
         </HBox>
-		<Button fx:id="btnCheckBuild" styleClass="button" text="Check Build">
-         <VBox.margin>
-            <Insets bottom="10.0" />
-         </VBox.margin></Button>
-		<Button fx:id="btnRemoveFromBuild" styleClass="button" text="Remove Selected from Build">
-         <VBox.margin>
-            <Insets bottom="10.0" />
-         </VBox.margin></Button>
-		<Button fx:id="btnCloseBuild" styleClass="button" text="Close" />
+		<Button fx:id="btnCheckBuild" onAction="#checkBuild" styleClass="button" text="Check Build">
+            <VBox.margin>
+                <Insets bottom="10.0" />
+            </VBox.margin></Button>
+		<Button fx:id="btnRemoveFromBuild" onAction="#removeFromBuild" styleClass="button" text="Remove Selected from Build">
+            <VBox.margin>
+                <Insets bottom="10.0" />
+            </VBox.margin>
+        </Button>
+		<Button fx:id="btnCloseBuild" onAction="#closeBuild" styleClass="button" text="Close" />
 	</children>
-   <padding>
-      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-   </padding>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
 </VBox>

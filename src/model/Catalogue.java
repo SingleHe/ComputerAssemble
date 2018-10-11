@@ -8,9 +8,23 @@ import java.util.List;
  */
 public class Catalogue {
    private static  List<Part> partList;
+   private static List<Part> filterList;
    public Catalogue(){
-
+      partList = new ArrayList<>();
+      Part storage = new Part("STORAGE","evo 860",155.00);
+      Part keyboard = new Part("KEYBOARD","daskeyboard",239.00);
+      Part cpu = new Part("CPU","i5",365.00);
+      Part motherboard = new Part("MOTHERBOARD","ASUG ROG",159.00);
+      Part case1 = new Part("CASE","sheetmetal box",39.00);
+      Part memory = new Part("MEMORY","corsair 16G",299.00);
+      partList.add(storage);
+      partList.add(keyboard);
+      partList.add(cpu);
+      partList.add(motherboard);
+      partList.add(case1);
+      partList.add(memory);
    }
+   /*
    private static void init(){
       List<Part> partList = new ArrayList<>();
       Part storage = new Part("STORAGE","evo 860",155.00);
@@ -25,7 +39,7 @@ public class Catalogue {
       partList.add(motherboard);
       partList.add(case1);
       partList.add(memory);
-   }
+   }*/
 
    public static List<Part> getPartList() {
       return partList;
@@ -41,5 +55,8 @@ public class Catalogue {
          }
       }
       return result;
+   }
+   public static List<Part> getFilterList() {
+      return filterList;
    }
 }

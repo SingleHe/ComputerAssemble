@@ -2,7 +2,7 @@ package controller;
 
 import au.edu.uts.ap.javafx.Controller;
 import au.edu.uts.ap.javafx.ViewLoader;
-import javafx.event.Event;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import model.Build;
 import model.Catalogue;
@@ -12,12 +12,12 @@ import model.Catalogue;
  */
 public class ComputerBuilderController extends Controller{
     @FXML
-    private void viewCatalogue(Event event) throws Exception{
-        ViewLoader.showStage(new Catalogue(),"view/catalogue.fxml","Catalogue",stage);
+    private void viewCatalogue(ActionEvent event) throws Exception{
+        ViewLoader.showStage(new Catalogue(),"/view/catalogue.fxml","Catalogue",stage);
     }
     @FXML
-    private void viewBuild(Event event) throws Exception{
-        ViewLoader.showStage(new Build(),"view/build.xml","Current Build",stage);
+    private void viewBuild(ActionEvent event) throws Exception{
+        ViewLoader.showStage(new Build(),"/view/build.fxml","Current Build",stage);
     }
     @FXML
     private void quit(){
